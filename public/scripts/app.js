@@ -82,7 +82,7 @@
 				alert(http.responseText);
 			} else {
 				if(app.postServerConnexionOK){
-					alert("error: no server available at IP: " + app.IpToSendDataTo.value);
+					alert("error: no server available at URL: " + url);
 					app.postServerConnexionOK = false;
 				}
 			}

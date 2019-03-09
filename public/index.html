@@ -31,6 +31,11 @@
 				<tr>
 					<td>Enter IP:port or IP</td>
 					<td><input list="IP_to_send_data_to_Datalist" class="IP_to_send_data_to" autocomplete="on" autofocus></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Enter server file path</td>
+					<td><input list="server_file_path" class="IP_to_send_data_to" autocomplete="on" autofocus></td>
 					<td><button type="button" class="ConnectStartButton">Connect and Start</button></td>
 				</tr>
 			</table>
@@ -38,27 +43,38 @@
 			</datalist>
 			<table class="table table-striped table-bordered">
 				<tr>
+					<td>Var name</td>
+					<td>Description</td>
+					<td>values</td>
+				</tr>
+				<tr>
+					<td>moApi</td>
 					<td>API used</td>
 					<td id="moApi"></td>
 				</tr>
 				<tr>
+					<td>-</td>
 					<td>Sending to URL</td>
 					<td id="Sending_to_IP_and_Port"></td>
 				</tr>
 				<tr>
+					<td>moAccel</td>
 					<td>Linear acceleration (excl. gravity)</td>
 					<td id="moAccel"></td>
 				</tr>
 			  <tr>
+			    <td>moAccelGrav</td>
 			    <td>Linear acceleration incl. gravity</td>
 			    <td id="moAccelGrav"></td>
 			  </tr>
 			  <tr>
+			    <td>moRotation</td>
 			    <td>Rotation rate</td>
 			    <td id="moRotation"></td>
 			  </tr>
 				<tr>
-					<td>Interval (ms)</td>
+					<td>moInterval</td>
+					<td>Interval in ms (real interval / factor_to_slow_down_refresh_rate)</td>
 					<td id="moInterval"></td>
 				</tr>
 			</table>
