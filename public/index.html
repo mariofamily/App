@@ -27,26 +27,35 @@
 			<button id="butRefresh" class="headerButton" aria-label="Refresh"></button>
 		</header>
 		<main class="main">
-			<input list="IP_to_send_data_to_Datalist" class="IP_to_send_data_to" autocomplete="on" ="IP:port or IP" autofocus>
-			<datalist id="IP_to_send_data_to_Datalist">
-			</datalist>
-			<button type="button" class="ConnectStartButton">Connect and Start</button>
 			<table class="table table-striped table-bordered">
 				<tr>
-					<td>Sending to (IP:port or IP):</td>
-					<td id="Sending_to_IP_and_Port"></td>
+					<td>Enter IP:port or IP</td>
+					<td><input list="IP_to_send_data_to_Datalist" class="IP_to_send_data_to" autocomplete="on" autofocus></td>
+					<td><button type="button" class="ConnectStartButton">Connect and Start</button></td>
 				</tr>
+			</table>
+			<datalist id="IP_to_send_data_to_Datalist">
+			</datalist>
+			<table class="table table-striped table-bordered">
 				<tr>
 					<td>API used</td>
 					<td id="moApi"></td>
+				</tr>
+				<tr>
+					<td>Sending to URL</td>
+					<td id="Sending_to_IP_and_Port"></td>
 				</tr>
 				<tr>
 					<td>Linear acceleration (excl. gravity)</td>
 					<td id="moAccel"></td>
 				</tr>
 			  <tr>
-			    <td>acceleration incl. gravity</td>
+			    <td>Linear acceleration incl. gravity</td>
 			    <td id="moAccelGrav"></td>
+			  </tr>
+			  <tr>
+			    <td>Rotation rate</td>
+			    <td id="moRotation"></td>
 			  </tr>
 				<tr>
 					<td>Interval (ms)</td>

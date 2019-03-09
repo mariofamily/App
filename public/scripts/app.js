@@ -135,6 +135,8 @@
 				var slowFactor = 20;
 				if (app.counter == slowFactor){
 					accelerationHandler(eventData.acceleration, 'moAccel');
+					accelerationHandler(eventData.acceleration, 'moAccelGrav');
+					rotationHandler(eventData.rotationRate);
 					intervalHandler(eventData.interval * slowFactor);
 					app.counter = 0;
 				}
