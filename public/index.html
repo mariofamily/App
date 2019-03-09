@@ -1,0 +1,64 @@
+<!--
+ Copyright 2019 Peguet Jean-Hugues
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Mario Family Companion</title>
+		<link rel="stylesheet" type="text/css" href="styles/inline.css">
+		<link rel="stylesheet" type="text/css" href="styles/layout.css">  
+
+		<link rel="manifest" href="/manifest.json">
+		<!-- Add to home screen for Safari on iOS -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Mario Family Companion">
+		<link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+		<meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+		<meta name="msapplication-TileColor" content="#2F3BA2">
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="header__title">Mario Family Companion</h1>
+			<button id="butRefresh" class="headerButton" aria-label="Refresh"></button>
+		</header>
+		<main class="main">
+			<input list="IP_to_send_data_to_Datalist" class="IP_to_send_data_to" autocomplete="on" ="IP:port or IP" autofocus>
+			<datalist id="IP_to_send_data_to_Datalist">
+			</datalist>
+			<button type="button" class="ConnectStartButton">Connect and Start</button>
+			<table class="table table-striped table-bordered">
+				<tr>
+					<td>Sending to (IP:port or IP):</td>
+					<td id="Sending_to_IP_and_Port"></td>
+				</tr>
+				<tr>
+					<td>API used</td>
+					<td id="moApi"></td>
+				</tr>
+				<tr>
+					<td>Linear acceleration (excl. gravity)</td>
+					<td id="moAccel"></td>
+				</tr>
+			  <tr>
+			    <td>acceleration incl. gravity</td>
+			    <td id="moAccelGrav"></td>
+			  </tr>
+				<tr>
+					<td>Interval (ms)</td>
+					<td id="moInterval"></td>
+				</tr>
+			</table>
+		</main>
+		<div class="loader">
+			<svg viewBox="0 0 32 32" width="32" height="32">
+				<circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+			</svg>
+		</div>
+		<script src="scripts/app.js" async></script>
+	</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "staging": "mariofamily-3",
+    "default": "mariofamily-3"
+  }
+}
