@@ -9,7 +9,9 @@
 		spinner: document.querySelector('.loader'),
 		ConnectStartButton: document.querySelector('.ConnectStartButton'),
 		IpToSendDataTo: document.querySelector('.IP_to_send_data_to'),
+		ServerFilePath: document.querySelector('.Server_file_path'),
 		IpToSendDataToDatalist: document.querySelector('#IP_to_send_data_to_Datalist'),
+		ServerFilePathDatalist: document.querySelector('#Server_file_path_Datalist'),
 		postServerConnexionOK: true,
 		counter: 0
 	};
@@ -18,6 +20,12 @@
 		var optionHTML = "";
 		optionHTML += "<option value='" + value + "'>" + value + "</option>";
 		app.IpToSendDataToDatalist.innerHTML += optionHTML;
+	}
+	
+	function addInputInServerFilePath(value) {
+		var optionHTML = "";
+		optionHTML += "<option value='" + value + "'>" + value + "</option>";
+		app.ServerFilePathDatalist.innerHTML += optionHTML;
 	}
 	
 	/************************************************************************
@@ -47,6 +55,7 @@
 		});
 		app.saveUsedIPs();
 	}
+	addInputInServerFilePath({serverFilePath: "/SmartphoneData.py"});
 
 	/*****************************************************************************
 	*
@@ -66,7 +75,7 @@
 	});
   
 	app.sendMotionData = function() {
-		var url = 'http://' + app.IpToSendDataTo.value + "/SmartphoneData.py";
+		var url = 'http://' + app.IpToSendDataTo.value + app.ServerFilePath.value;
 		document.getElementById('Sending_to_IP_and_Port').innerHTML = url;
 		var http = new XMLHttpRequest();
 		var params = 'name=VersionOfMarioFamilyApp_0.0.1&moAccelGrav=' + document.getElementById('moAccelGrav').innerHTML;
